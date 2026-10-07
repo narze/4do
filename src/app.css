@@ -1,0 +1,130 @@
+:root {
+	--bg: #f6f5f1;
+	--card: #fff;
+	--ink: #1d1d1b;
+	--mute: #76746d;
+	--line: #e3e1d9;
+	--q1: #d9453a;
+	--q2: #2f7d5b;
+	--q3: #c98a14;
+	--q4: #6b7280;
+	--q1b: #fdeceb;
+	--q2b: #e8f4ee;
+	--q3b: #fdf4e1;
+	--q4b: #eef0f2;
+	--shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #141413;
+		--card: #222220;
+		--ink: #f1efe8;
+		--mute: #9b988f;
+		--line: #34332f;
+		--q1b: #2c1816;
+		--q2b: #14251d;
+		--q3b: #2a2210;
+		--q4b: #1e2023;
+		--shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	}
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--ink);
+	font: 15px/1.4 system-ui, -apple-system, 'Sarabun', 'Noto Sans Thai', sans-serif;
+	padding: 16px max(16px, env(safe-area-inset-right)) 40px max(16px, env(safe-area-inset-left));
+}
+[hidden] {
+	display: none !important;
+}
+button {
+	font: inherit;
+	cursor: pointer;
+}
+.wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+.panel {
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	padding: 12px;
+	box-shadow: var(--shadow);
+	min-width: 0;
+}
+.panel h2 {
+	font-size: 13px;
+	margin: 0 0 8px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--mute);
+	display: flex;
+	justify-content: space-between;
+}
+.hint {
+	font-size: 12px;
+	color: var(--mute);
+	margin-top: 10px;
+}
+.empty {
+	font-size: 12px;
+	color: var(--mute);
+	text-align: center;
+	padding: 14px 4px;
+	opacity: 0.8;
+}
+.tabs {
+	display: none;
+	gap: 6px;
+	overflow-x: auto;
+	margin-bottom: 10px;
+	scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar {
+	display: none;
+}
+.tabs button {
+	flex: 1 0 auto;
+	border: 1.5px solid var(--line);
+	background: var(--card);
+	color: var(--ink);
+	border-radius: 999px;
+	padding: 6px 12px;
+	font-size: 13px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+.tabs button i {
+	font-style: normal;
+	color: var(--mute);
+	font-weight: 400;
+	margin-left: 4px;
+}
+.tabs button.on {
+	color: #fff;
+}
+.tabs button.on i {
+	color: #fff;
+	opacity: 0.85;
+}
+.tabs button.on.q1 {
+	background: var(--q1);
+	border-color: var(--q1);
+}
+.tabs button.on.q2 {
+	background: var(--q2);
+	border-color: var(--q2);
+}
+.tabs button.on.q3 {
+	background: var(--q3);
+	border-color: var(--q3);
+}
+.tabs button.on.q4 {
+	background: var(--q4);
+	border-color: var(--q4);
+}
