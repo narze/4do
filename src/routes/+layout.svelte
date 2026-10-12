@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Eisenhower Todo</title>
+	<title>4do</title>
 </svelte:head>
 
 {@render children()}

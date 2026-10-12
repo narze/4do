@@ -5,7 +5,7 @@ export interface Task {
 	text: string;
 	q: Q;
 	done: boolean;
-	/** Position on the post-it board, 0..1 (only when q !== 'inbox'). */
+	/** Position on the sticky note board, 0..1 (only when q !== 'inbox'). */
 	px?: number;
 	py?: number;
 }

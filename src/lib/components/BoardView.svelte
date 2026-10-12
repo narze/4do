@@ -115,7 +115,7 @@
 		if (pan === e.pointerId) pan = null;
 	}
 
-	/* ---------- dragging a post-it ---------- */
+	/* ---------- dragging a sticky note ---------- */
 	type ND = {
 		id: string;
 		sx: number;
@@ -287,8 +287,8 @@
 						<div class="empty">ว่าง 🎉</div>
 					{/each}
 				</div>
-				<div class="hint">ลาก post-it ไปวางตรงไหนก็ได้บนบอร์ด · ลากกลับมาที่นี่เพื่อเก็บเข้า Inbox · จีบสองนิ้วเพื่อซูม</div>
-				<label class="opt"><input type="checkbox" bind:checked={ui.showText} /> แสดงข้อความบน post-it</label>
+				<div class="hint">ลาก sticky note ไปวางตรงไหนก็ได้บนบอร์ด · ลากกลับมาที่นี่เพื่อเก็บเข้า Inbox · จีบสองนิ้วเพื่อซูม</div>
+				<label class="opt"><input type="checkbox" bind:checked={ui.showText} /> แสดงข้อความบน sticky note</label>
 			</section>
 			<Detail {store} />
 		</div>
@@ -454,7 +454,7 @@
 		inset: 0;
 	}
 
-	/* post-it */
+	/* sticky note */
 	.pn {
 		--s: var(--ns, 38px);
 		width: var(--s);

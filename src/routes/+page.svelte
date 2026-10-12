@@ -21,11 +21,11 @@
 
 <div class="wrap">
 	<div class="top">
-		<h1>Eisenhower Todo <small>{store.openCount} ค้างอยู่</small></h1>
+		<h1>4do <small>{store.openCount} ค้างอยู่</small></h1>
 		<button class="zbtn" class:on={zoomOn} onclick={toggleZoom} title="ซูมเข้า/ออก">🔍 ซูม</button>
 		<div class="seg">
+			<button class:on={ui.view === 'board'} onclick={() => (ui.view = 'board')}>Sticky note</button>
 			<button class:on={ui.view === 'list'} onclick={() => (ui.view = 'list')}>List</button>
-			<button class:on={ui.view === 'board'} onclick={() => (ui.view = 'board')}>Post-it</button>
 		</div>
 	</div>
 

@@ -1,12 +1,12 @@
 const KEY = 'eisenhower-ui-v1';
 
 export class UI {
-	view = $state<'list' | 'board'>('list');
+	view = $state<'list' | 'board'>('board');
 	/** List: swipe one quadrant at a time (true) or whole 2×2 matrix (false). */
 	zoomList = $state(false);
 	/** Board scale 1..4 (pinch to zoom). */
 	bscale = $state(1);
-	showText = $state(false);
+	showText = $state(true);
 
 	constructor() {
 		this.zoomList = matchMedia('(max-width: 859px)').matches;

@@ -33,7 +33,7 @@
 			{/each}
 		</div>
 	{:else}
-		<div class="hint0">แตะ post-it เพื่อดูข้อความ แก้ไข หรือย้ายช่อง</div>
+		<div class="hint0">แตะ sticky note เพื่อดูข้อความ แก้ไข หรือย้ายช่อง</div>
 	{/if}
 </section>
 
